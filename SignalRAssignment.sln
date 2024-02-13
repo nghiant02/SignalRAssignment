@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRAssignment", "Signal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{D040C8E6-8367-46AE-8B90-DB2E8B1EC1E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Tests", "Repository.Tests\Repository.Tests.csproj", "{C888C013-B8E8-4081-A7CD-3219B4D19B8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D040C8E6-8367-46AE-8B90-DB2E8B1EC1E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D040C8E6-8367-46AE-8B90-DB2E8B1EC1E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D040C8E6-8367-46AE-8B90-DB2E8B1EC1E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C888C013-B8E8-4081-A7CD-3219B4D19B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C888C013-B8E8-4081-A7CD-3219B4D19B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C888C013-B8E8-4081-A7CD-3219B4D19B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C888C013-B8E8-4081-A7CD-3219B4D19B8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
