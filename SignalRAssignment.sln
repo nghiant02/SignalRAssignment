@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRAssignment", "SignalRAssignment\SignalRAssignment.csproj", "{5C3ED0AB-8D1A-460B-A4FF-6B0BB1845DF4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{D040C8E6-8367-46AE-8B90-DB2E8B1EC1E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "Repository\DataAccessLayer.csproj", "{D040C8E6-8367-46AE-8B90-DB2E8B1EC1E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
