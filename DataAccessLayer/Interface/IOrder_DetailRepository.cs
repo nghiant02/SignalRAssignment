@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository.Interface
+namespace DataAccessLayer.Interface
 {
-    public interface IAccountRepository : IGenericRepository<Account>
+    public interface IOrder_DetailRepository : IGenericRepository<Order_Detail>
     {
     }
 }

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRAssignment", "SignalRAssignment\SignalRAssignment.csproj", "{5C3ED0AB-8D1A-460B-A4FF-6B0BB1845DF4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "Repository\DataAccessLayer.csproj", "{D040C8E6-8367-46AE-8B90-DB2E8B1EC1E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{C67EC54D-B12F-4F29-91CB-750AC76601BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{5C3ED0AB-8D1A-460B-A4FF-6B0BB1845DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C3ED0AB-8D1A-460B-A4FF-6B0BB1845DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C3ED0AB-8D1A-460B-A4FF-6B0BB1845DF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D040C8E6-8367-46AE-8B90-DB2E8B1EC1E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D040C8E6-8367-46AE-8B90-DB2E8B1EC1E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D040C8E6-8367-46AE-8B90-DB2E8B1EC1E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D040C8E6-8367-46AE-8B90-DB2E8B1EC1E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C67EC54D-B12F-4F29-91CB-750AC76601BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67EC54D-B12F-4F29-91CB-750AC76601BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67EC54D-B12F-4F29-91CB-750AC76601BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67EC54D-B12F-4F29-91CB-750AC76601BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

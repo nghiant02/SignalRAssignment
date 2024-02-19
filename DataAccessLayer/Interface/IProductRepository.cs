@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository.Interface
+namespace DataAccessLayer.Interface
 {
     public interface IProductRepository : IGenericRepository<Product>
     {

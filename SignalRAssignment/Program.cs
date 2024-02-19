@@ -1,6 +1,6 @@
+using DataAccessLayer.Interface;
+using DataAccessLayer.Repositories;
 using Microsoft.EntityFrameworkCore;
-using Repository.Data;
-using Repository.Interface;
 using Repository.Models;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Repository.Interface;
+﻿using DataAccessLayer.Interface;
+using Microsoft.EntityFrameworkCore;
 using Repository.Models;
 using System;
 using System.Collections.Generic;
@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository.Data
+namespace DataAccessLayer.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
         private readonly PizzaStoreContext _context;
-        public IAccountRepository Account {  get; private set; }
+        public IAccountRepository Account { get; private set; }
         public ICategoryRepository Category { get; private set; }
         public ICustomerRepository Customer { get; private set; }
         public IOrderRepository Order { get; private set; }
