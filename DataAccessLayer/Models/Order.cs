@@ -15,16 +15,13 @@ public partial class Order
 
     public int? CustomerID { get; set; }
 
-    [Column(TypeName = "datetime")]
-    public DateTime? OrderDate { get; set; }
+    public DateOnly? OrderDate { get; set; }
 
-    [Column(TypeName = "datetime")]
-    public DateTime? RequiredDate { get; set; }
+    public DateOnly? RequiredDate { get; set; }
 
-    [Column(TypeName = "datetime")]
-    public DateTime? ShippedDate { get; set; }
+    public DateOnly? ShippedDate { get; set; }
 
-    [Column(TypeName = "decimal(18, 0)")]
+    [Column(TypeName = "decimal(10, 2)")]
     public decimal? Freight { get; set; }
 
     [StringLength(255)]
@@ -35,5 +32,5 @@ public partial class Order
     public virtual Customer Customer { get; set; }
 
     [InverseProperty("Order")]
-    public virtual ICollection<Order_Detail> Order_Details { get; set; } = new List<Order_Detail>();
+    public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 }

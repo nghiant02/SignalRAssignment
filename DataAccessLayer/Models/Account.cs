@@ -23,6 +23,6 @@ public partial class Account
     [StringLength(255)]
     public string FullName { get; set; }
 
-    [StringLength(255)]
+    [StringLength(50)]
     public string Type { get; set; }
 }

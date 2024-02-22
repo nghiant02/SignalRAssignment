@@ -25,71 +25,75 @@ public partial class PizzaStoreContext : DbContext
 
     public virtual DbSet<Order> Orders { get; set; }
 
-    public virtual DbSet<Order_Detail> Order_Details { get; set; }
+    public virtual DbSet<OrderDetail> OrderDetails { get; set; }
 
     public virtual DbSet<Product> Products { get; set; }
 
     public virtual DbSet<Supplier> Suppliers { get; set; }
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=LEO\\SQLEXPRESS;Initial Catalog=PizzaStore;User ID=sa;Password=123456");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.AccountID).HasName("PK__Account__349DA586FA6A0288");
+            entity.HasKey(e => e.AccountID).HasName("PK__Account__349DA5860D521E4F");
 
             entity.Property(e => e.AccountID).ValueGeneratedNever();
         });
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryID).HasName("PK__Categori__19093A2B272A733D");
+            entity.HasKey(e => e.CategoryID).HasName("PK__Categori__19093A2BD5B57F94");
 
             entity.Property(e => e.CategoryID).ValueGeneratedNever();
         });
 
         modelBuilder.Entity<Customer>(entity =>
         {
-            entity.HasKey(e => e.CustomerID).HasName("PK__Customer__A4AE64B87BF6827C");
+            entity.HasKey(e => e.CustomerID).HasName("PK__Customer__A4AE64B89A31A677");
 
             entity.Property(e => e.CustomerID).ValueGeneratedNever();
         });
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderID).HasName("PK__Orders__C3905BAF45D64A58");
+            entity.HasKey(e => e.OrderID).HasName("PK__Orders__C3905BAF78AABE2A");
 
             entity.Property(e => e.OrderID).ValueGeneratedNever();
 
-            entity.HasOne(d => d.Customer).WithMany(p => p.Orders).HasConstraintName("FK__Orders__Customer__59063A47");
+            entity.HasOne(d => d.Customer).WithMany(p => p.Orders).HasConstraintName("FK__Orders__Customer__4BAC3F29");
         });
 
-        modelBuilder.Entity<Order_Detail>(entity =>
+        modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => new { e.OrderID, e.ProductID }).HasName("PK__Order_De__08D097C177A0810B");
+            entity.HasKey(e => new { e.OrderID, e.ProductID }).HasName("PK__OrderDet__08D097C1ACDC97B3");
 
-            entity.HasOne(d => d.Order).WithMany(p => p.Order_Details)
+            entity.HasOne(d => d.Order).WithMany(p => p.OrderDetails)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Order_Det__Order__5535A963");
+                .HasConstraintName("FK__OrderDeta__Order__4E88ABD4");
 
-            entity.HasOne(d => d.Product).WithMany(p => p.Order_Details)
+            entity.HasOne(d => d.Product).WithMany(p => p.OrderDetails)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Order_Det__Produ__5629CD9C");
+                .HasConstraintName("FK__OrderDeta__Produ__59063A47");
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductID).HasName("PK__Products__B40CC6EDEB403F9F");
+            entity.HasKey(e => e.ProductID).HasName("PK__Products__B40CC6EDCEB28107");
 
             entity.Property(e => e.ProductID).ValueGeneratedNever();
 
-            entity.HasOne(d => d.Category).WithMany(p => p.Products).HasConstraintName("FK__Products__Catego__5812160E");
+            entity.HasOne(d => d.Category).WithMany(p => p.Products).HasConstraintName("FK__Products__Catego__571DF1D5");
 
-            entity.HasOne(d => d.Supplier).WithMany(p => p.Products).HasConstraintName("FK__Products__Suppli__571DF1D5");
+            entity.HasOne(d => d.Supplier).WithMany(p => p.Products).HasConstraintName("FK__Products__Suppli__5812160E");
         });
 
         modelBuilder.Entity<Supplier>(entity =>
         {
-            entity.HasKey(e => e.SupplierID).HasName("PK__Supplier__4BE6669440FEFFD6");
+            entity.HasKey(e => e.SupplierID).HasName("PK__Supplier__4BE666946EBF4CB1");
 
             entity.Property(e => e.SupplierID).ValueGeneratedNever();
         });

@@ -23,18 +23,18 @@ public partial class Product
     [StringLength(255)]
     public string QuantityPerUnit { get; set; }
 
-    [Column(TypeName = "decimal(18, 0)")]
+    [Column(TypeName = "decimal(10, 2)")]
     public decimal? UnitPrice { get; set; }
 
-    [Column(TypeName = "text")]
-    public string ProductImage { get; set; }
+    [Column(TypeName = "image")]
+    public byte[] ProductImage { get; set; }
 
     [ForeignKey("CategoryID")]
     [InverseProperty("Products")]
     public virtual Category Category { get; set; }
 
     [InverseProperty("Product")]
-    public virtual ICollection<Order_Detail> Order_Details { get; set; } = new List<Order_Detail>();
+    public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 
     [ForeignKey("SupplierID")]
     [InverseProperty("Products")]

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Repository.Models;
 
 [PrimaryKey("OrderID", "ProductID")]
-public partial class Order_Detail
+public partial class OrderDetail
 {
     [Key]
     public int OrderID { get; set; }
@@ -17,16 +17,16 @@ public partial class Order_Detail
     [Key]
     public int ProductID { get; set; }
 
-    [Column(TypeName = "decimal(18, 0)")]
+    [Column(TypeName = "decimal(10, 2)")]
     public decimal? UnitPrice { get; set; }
 
     public int? Quantity { get; set; }
 
     [ForeignKey("OrderID")]
-    [InverseProperty("Order_Details")]
+    [InverseProperty("OrderDetails")]
     public virtual Order Order { get; set; }
 
     [ForeignKey("ProductID")]
-    [InverseProperty("Order_Details")]
+    [InverseProperty("OrderDetails")]
     public virtual Product Product { get; set; }
 }

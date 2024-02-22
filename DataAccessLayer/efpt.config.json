@@ -28,7 +28,7 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Order_Details]",
+         "Name": "[dbo].[OrderDetails]",
          "ObjectType": 0
       },
       {
